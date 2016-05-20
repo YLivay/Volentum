@@ -12,7 +12,7 @@
         }
         global.timescale *= 0.98;
         if ( global.screenAlpha >= 1 ) {
-            levelReset();
+            levelReset( true );
         }
     }
     else {

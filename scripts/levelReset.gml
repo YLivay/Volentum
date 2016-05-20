@@ -1,8 +1,8 @@
-///levelReset
+///levelReset( resetPlayer )
 {
     global.timescale = 1;
     var checkpoint = global.checkpoints[| global.currentLevel];
-    if ( instance_exists( objFormation ) ) {
+    if ( argument0 && instance_exists( objFormation ) ) {
         objFormation.x = checkpoint.x;
         objFormation.y = checkpoint.y;
     }

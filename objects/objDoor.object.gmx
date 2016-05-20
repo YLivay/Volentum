@@ -50,7 +50,7 @@
             <kind>1</kind>
             <string>var isOpen = global.currentLevel &gt;= level;
 if ( !isEntry ) {
-    isOpen = global.levelSpawned &amp;&amp; instance_number( objEnemy ) == 0;
+    isOpen = isOpen &amp;&amp; global.levelSpawned &amp;&amp; instance_number( objEnemy ) == 0;
 }
 
 if ( isOpen &amp;&amp; objFormation.bbox_left &lt;= bbox_right ) {

@@ -78,7 +78,9 @@
     
     global.checkpoints = ds_list_create();
     while ( !ds_priority_empty( tempCheckpoints ) ) {
-        ds_list_add( global.checkpoints, ds_priority_delete_min( tempCheckpoints ) );
+        var checkpoint = ds_priority_delete_min( tempCheckpoints );
+        checkpoint.level = ds_list_size( global.checkpoints );
+        ds_list_add( global.checkpoints, checkpoint );
     }
     ds_priority_clear( tempCheckpoints );
     ds_priority_destroy( tempCheckpoints );
@@ -125,17 +127,21 @@
     }
     
     with ( objSpawnGroup ) {
+        show_debug_message( 'Finding checkpoint for spawn group ' + string( x ) );
+        // Find the right most checkpoint.
+        var bestCheckpoint = noone;
         for ( var i = global.levelCount; i >= 0; i -= 1 ) {
             var checkpoint = global.checkpoints[| i];
-            var data = global.levelData[| i];
-            var spawnGroupObjs = data[? 'spawnGroupObjs'];
-            if ( x > checkpoint.x ) {
-                level = max( level, i );
-                ds_list_add( spawnGroupObjs, id );
-                break;
+            if ( checkpoint != undefined && x > checkpoint.x && ( bestCheckpoint == noone || checkpoint.x > bestCheckpoint.x ) ) {
+                bestCheckpoint = checkpoint;
             }
         }
+        
+        show_debug_message( 'Set it to level ' + string( bestCheckpoint.level ) );
+        var data = global.levelData[| bestCheckpoint.level];
+        var spawnGroupObjs = data[? 'spawnGroupObjs'];
+        ds_list_add( spawnGroupObjs, id );
     }
     
-    levelReset();
+    levelReset( false );
 }
