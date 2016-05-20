@@ -58,7 +58,6 @@
         <sprite>sprites\sprBrianPortraits</sprite>
       </sprites>
       <sprite>sprites\sprFormationMask</sprite>
-      <sprite>sprites\sprSelector</sprite>
       <sprite>sprites\sprSmallCollision</sprite>
       <sprite>sprites\sprBigCollision</sprite>
       <sprite>sprites\sprShadow</sprite>
@@ -91,6 +90,10 @@
     </sprites>
     <sprites name="UI">
       <sprite>sprites\sprDialogBox</sprite>
+      <sprite>sprites\sprExclamation</sprite>
+      <sprite>sprites\sprHeart</sprite>
+      <sprite>sprites\sprAim</sprite>
+      <sprite>sprites\sprSelector</sprite>
     </sprites>
     <sprites name="Doodads">
       <sprite>sprites\sprite60</sprite>
@@ -101,6 +104,7 @@
     <sprites name="Level">
       <sprite>sprites\sprLevel</sprite>
       <sprite>sprites\sprLevelTop</sprite>
+      <sprite>sprites\sprSpiderNest</sprite>
       <sprite>sprites\sprCheckpoint</sprite>
       <sprite>sprites\sprSpawnGroup</sprite>
       <sprite>sprites\sprDoor</sprite>
@@ -108,6 +112,13 @@
       <sprite>sprites\sprTorch</sprite>
       <sprite>sprites\sprGround</sprite>
       <sprite>sprites\sprWall</sprite>
+      <sprite>sprites\sprMagicTrap</sprite>
+      <sprite>sprites\sprRune</sprite>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprite>sprites\sprAlfMagic</sprite>
+      <sprite>sprites\sprBrianMagic</sprite>
+      <sprite>sprites\sprMageMagic</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
