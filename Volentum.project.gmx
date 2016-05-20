@@ -4,7 +4,31 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="Sound">
+      <sound>sound\sndArrow</sound>
+      <sound>sound\sndAttack</sound>
+      <sound>sound\sndBarrier</sound>
+      <sound>sound\sndBeep</sound>
+      <sound>sound\sndBrute</sound>
+      <sound>sound\sndBurn</sound>
+      <sound>sound\sndCheckpoint</sound>
+      <sound>sound\sndDefeat</sound>
+      <sound>sound\sndHit</sound>
+      <sound>sound\sndKill</sound>
+      <sound>sound\sndMagicCharge</sound>
+      <sound>sound\sndMagicProjectile</sound>
+      <sound>sound\sndPounce</sound>
+      <sound>sound\sndStep</sound>
+      <sound>sound\sndStun</sound>
+    </sounds>
+    <sounds name="Music">
+      <sound>sound\musBattle</sound>
+      <sound>sound\musBoss</sound>
+      <sound>sound\musCore</sound>
+      <sound>sound\musTitle</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
       <sprites name="Alf">
