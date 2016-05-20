@@ -5,7 +5,7 @@
     if ( global.hp <= 0 ) {
         global.screenColor = c_white;
         if ( global.screenAlpha > 0 ) {
-            global.screenAlpha *= 1.1;
+            global.screenAlpha *= 1.03;
         }
         else {
             global.screenAlpha = 0.01;

@@ -50,7 +50,6 @@ level = 0;
           <argument>
             <kind>1</kind>
             <string>if ( level != 0 &amp;&amp; point_distance( x, y, objFormation.x, objFormation.y ) &lt; 64 &amp;&amp; !reached ) {
-    levelAdvance();
     reached = true;
 }
 </string>

@@ -1,5 +1,4 @@
-///levelAdvance()
+///levelAdvance( level )
 {
-    global.currentLevel += 1;
-    levelSpawn();
+    global.currentLevel = argument0;
 }
