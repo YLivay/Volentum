@@ -1,0 +1,4 @@
+///enemyAIBeginStep()
+{
+    aiPrevState = aiState;
+}

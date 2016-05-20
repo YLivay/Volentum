@@ -1,0 +1,4 @@
+///characterBeginStep()
+{
+    prevIsMoving = isMoving;
+}
