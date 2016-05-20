@@ -140,6 +140,17 @@ if ( isAttacking ) {
         attackFrame = 0;
     }
 }
+
+if ( isBarrierActive ) {
+    if ( !audio_is_playing( sndBarrier ) ) {
+        audio_play_sound( sndBarrier, 0, false );
+        audio_play_sound( sndMagicCharge, 0, false );
+    }
+} else {
+    if ( audio_is_playing( sndBarrier ) ) {
+        audio_stop_sound( sndBarrier );
+    }
+}
 </string>
           </argument>
         </arguments>

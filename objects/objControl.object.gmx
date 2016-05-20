@@ -27,6 +27,14 @@
             <kind>1</kind>
             <string>gameInit();
 playerInit( Characters.FREY );
+
+audio_play_sound( musCore, 1, true );
+audio_play_sound( musBattle, 1, true );
+audio_play_sound( musBoss, 1, true );
+
+audio_sound_gain( musCore, 0.4, 0 );
+audio_sound_gain( musBattle, 0, 0 );
+audio_sound_gain( musBoss, 0, 0 );
 </string>
           </argument>
         </arguments>
@@ -50,6 +58,15 @@ playerInit( Characters.FREY );
           <argument>
             <kind>1</kind>
             <string>playerStep();
+
+if ( instance_exists( objFormation ) ) {
+    var checkpoint = instance_nearest( objFormation.x, objFormation.y, objCheckpoint );
+    if ( point_distance( objFormation.x, objFormation.y, checkpoint.x, checkpoint.y ) &gt; 360 ) {
+        audio_sound_gain( musBattle, 0.4, 1000 );
+    } else {
+        audio_sound_gain( musBattle, 0, 1000 );
+    }
+}
 </string>
           </argument>
         </arguments>
