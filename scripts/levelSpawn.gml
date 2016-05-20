@@ -1,7 +1,7 @@
 ///levelSpawn()
 {
     // Spawn for everything but the boss level.
-    if ( global.currentLevel < global.levelCount - 1 ) {
+    if ( global.currentLevel < global.levelCount ) {
         var level = global.levelData[| global.currentLevel];
         var toSpawn = level[? 'initialSpawnGroups'];
         var spawnGroupObjs = ds_list_create();

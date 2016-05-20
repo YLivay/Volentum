@@ -40,7 +40,6 @@ enum SkeletonStates {
 
 skeleState = SkeletonStates.CHASING;
 alreadySlashed = false;
-instance_destroy();
 </string>
           </argument>
         </arguments>
