@@ -38,6 +38,7 @@ dmState = DarkMageStates.WAITING_TO_ATTACK;
 attackDelay = 0;
 chargeDelay = 0;
 attackFrame = 0;
+show_message( 'hi' );
 </string>
           </argument>
         </arguments>

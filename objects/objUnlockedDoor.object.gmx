@@ -34,6 +34,9 @@
     if ( isEntry &amp;&amp; !global.levelSpawned ) {
         levelSpawn();
     }
+    else if ( !isEntry ) {
+        levelAdvance( level + 1 );
+    }
     instance_destroy();
 }
 </string>

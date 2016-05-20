@@ -125,12 +125,12 @@
     }
     
     with ( objSpawnGroup ) {
-        for ( var i = global.levelCount - 1; i >= 0; i -= 1 ) {
+        for ( var i = global.levelCount; i >= 0; i -= 1 ) {
             var checkpoint = global.checkpoints[| i];
             var data = global.levelData[| i];
             var spawnGroupObjs = data[? 'spawnGroupObjs'];
-            if ( level == -1 && x > checkpoint.x ) {
-                level = i;
+            if ( x > checkpoint.x ) {
+                level = max( level, i );
                 ds_list_add( spawnGroupObjs, id );
                 break;
             }

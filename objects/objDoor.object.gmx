@@ -48,17 +48,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var minimumLevel = level;
+            <string>var isOpen = global.currentLevel &gt;= level;
 if ( !isEntry ) {
-    minimumLevel += 1;
+    isOpen = global.levelSpawned &amp;&amp; instance_number( objEnemy ) == 0;
 }
 
-if ( global.currentLevel &gt;= minimumLevel &amp;&amp; objFormation.bbox_left &lt;= bbox_right ) {
+if ( isOpen &amp;&amp; objFormation.bbox_left &lt;= bbox_right ) {
     with ( instance_create( x, y, objUnlockedDoor ) ) {
         level = other.level;
         isEntry = other.isEntry;
     }
-    
     instance_destroy();
 }
 </string>

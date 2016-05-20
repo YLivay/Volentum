@@ -9,4 +9,8 @@
     global.hp = PLAYER_HP;
     global.invincibility = 0;
     global.levelSpawned = false;
+    
+    with ( objEnemy ) {
+        instance_destroy();
+    }
 }
