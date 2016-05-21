@@ -3,22 +3,22 @@
   <type>0</type>
   <xorig>0</xorig>
   <yorigin>0</yorigin>
-  <colkind>0</colkind>
+  <colkind>1</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>-1</sepmasks>
+  <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>28</bbox_left>
-  <bbox_right>214</bbox_right>
-  <bbox_top>48</bbox_top>
-  <bbox_bottom>88</bbox_bottom>
+  <bbox_right>752</bbox_right>
+  <bbox_top>14</bbox_top>
+  <bbox_bottom>93</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>400</width>
-  <height>200</height>
+  <width>800</width>
+  <height>150</height>
   <frames>
     <frame index="0">images\sprLevelTop_0.png</frame>
   </frames>

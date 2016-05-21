@@ -30,6 +30,8 @@
 isBarrierActive = 0;
 isAttacking = false;
 attackFrame = 0;
+
+pl_light_init( 0, c_white, 0 );
 </string>
           </argument>
         </arguments>
@@ -138,6 +140,18 @@ if ( isAttacking ) {
     if ( attackFrame &gt;= sprite_get_number( sprAlfUpperAttacking ) ) {
         isAttacking = false;
         attackFrame = 0;
+    }
+}
+
+if ( isBarrierActive ) {
+    if ( !audio_is_playing( sndBarrier ) ) {
+        audio_play_sound( sndBarrier, 0, false );
+        pl_light_init( 256, make_color_rgb(95, 205, 228), 0.4 );
+    }
+} else {
+    if ( audio_is_playing( sndBarrier ) ) {
+        audio_stop_sound( sndBarrier );
+        pl_light_init( 0, c_white, 0 );
     }
 }
 </string>

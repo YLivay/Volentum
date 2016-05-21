@@ -130,6 +130,7 @@ if ( global.selectedCharacter == character ) {
         focus = 0;
         isStunning = true;
         stunFrame = 0;
+        audio_play_sound( sndStun, 0, false );
         
         with ( objEnemy ) {
             if ( aiState != AIStates.DYING ) {

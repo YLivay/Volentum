@@ -92,6 +92,7 @@ if ( aiState == AIStates.ATTACKING ) {
                 show_debug_message( 'Reached attack delay 0, charging attack' );
                 chargeDelay = DARK_MAGE_ATTACK_CHARGE_DURATION * room_speed;
                 dmState = DarkMageStates.CHARGING_ATTACK;
+                audio_play_sound( sndMagicCharge, 0, false );
             }
             break;
         

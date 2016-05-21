@@ -21,6 +21,7 @@
     for ( var i = 0; i < ds_list_size( global.switchKeys ); i++ ) {
         if ( isKeyPressed( global.switchKeys[| i] ) ) {
             playerSwitchCharacter( global.switchKeys[| i] );
+            audio_play_sound( sndBeep, 0, false );
             break;
         }
     }

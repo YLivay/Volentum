@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\prettylight</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="Sound">
       <sound>sound\sndArrow</sound>
@@ -346,9 +348,38 @@
         <script>scripts\tileGet.gml</script>
       </scripts>
     </scripts>
+    <scripts name="prettylight">
+      <scripts name="pl">
+        <script>scripts\pl_init.gml</script>
+        <script>scripts\pl_set_vivid.gml</script>
+        <script>scripts\pl_set_blurring.gml</script>
+        <script>scripts\pl_option_set_ambience.gml</script>
+        <script>scripts\pl_option_set_blur.gml</script>
+        <script>scripts\pl_add.gml</script>
+        <script>scripts\pl_update.gml</script>
+        <script>scripts\pl_draw.gml</script>
+        <script>scripts\pl_end.gml</script>
+      </scripts>
+      <scripts name="pl_light">
+        <script>scripts\pl_light_init.gml</script>
+        <script>scripts\pl_light_get_alpha.gml</script>
+        <script>scripts\pl_light_set_alpha.gml</script>
+        <script>scripts\pl_light_get_radius.gml</script>
+        <script>scripts\pl_light_set_radius.gml</script>
+        <script>scripts\pl_light_get_color.gml</script>
+        <script>scripts\pl_light_set_color.gml</script>
+        <script>scripts\pl_light_update.gml</script>
+        <script>scripts\pl_light_draw.gml</script>
+        <script>scripts\pl_light_destroy.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shdPassthrough.shader</shader>
+    <shaders name="prettylight">
+      <shader type="GLSLES">shaders\pl_shd_gaussian_horizontal.shader</shader>
+      <shader type="GLSLES">shaders\pl_shd_gaussian_vertical.shader</shader>
+    </shaders>
   </shaders>
   <fonts name="fonts">
     <font>fonts\fntDialog</font>

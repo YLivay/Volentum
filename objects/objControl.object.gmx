@@ -34,6 +34,19 @@ with ( instance_create( 0, 0, objCinematics ) ) {
     timeline_speed = 1;
     timeline_running = true;
 }*/
+
+audio_play_sound( musCore, 1, true );
+audio_play_sound( musBattle, 1, true );
+audio_play_sound( musBoss, 1, true );
+
+audio_sound_gain( musCore, 0.4, 0 );
+audio_sound_gain( musBattle, 0, 0 );
+audio_sound_gain( musBoss, 0, 0 );
+
+// pl_init();
+// pl_add( objProjectile, objAlf, objFormation );
+// pl_set_vivid( true );
+// pl_option_set_ambience( make_color_rgb( 203, 219, 252 ), 0.1 );
 </string>
           </argument>
         </arguments>
@@ -57,6 +70,63 @@ with ( instance_create( 0, 0, objCinematics ) ) {
           <argument>
             <kind>1</kind>
             <string>playerStep();
+
+if ( instance_exists( objFormation ) ) {
+    var checkpoint = instance_nearest( objFormation.x, objFormation.y, objCheckpoint );
+    if ( point_distance( objFormation.x, objFormation.y, checkpoint.x, checkpoint.y ) &gt; 360 ) {
+        audio_sound_gain( musBattle, 0.4, 1000 );
+    } else {
+        audio_sound_gain( musBattle, 0, 1000 );
+    }
+}
+
+// pl_update();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// pl_end();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// pl_draw();
 </string>
           </argument>
         </arguments>
