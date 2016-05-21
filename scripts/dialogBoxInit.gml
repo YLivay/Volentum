@@ -23,4 +23,5 @@
     global.dialogBoxCurrentCaptionColor = c_white;
     global.dialogBoxCurrentPortrait = -1;
     global.dialogBoxCurrentPortraitImage = -1;
+    global.dialogBoxHidden = true;
 }

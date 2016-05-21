@@ -26,10 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>dialogBoxInit( sprDialogBox, 10, 10, 10, 30, 68, 30, 3, 20 / room_speed );
-dialogBoxWrite( "I found these herbs just outside" );
-dialogBoxWrite( "the dungeon.\w20 They help you relax.\w40" );
-dialogBoxWrite( "Here, Mia, have some. It's natural..." );
-dialogBoxSetPortrait( "Alf", c_aqua, sprAlfPortraits, 0 );
 </string>
           </argument>
         </arguments>
@@ -56,12 +52,16 @@ dialogBoxSetPortrait( "Alf", c_aqua, sprAlfPortraits, 0 );
 y = view_yview[0] + view_hview[0] - sprite_get_height( sprite_index ) - 20;
 dialogBoxStep();
 
-if ( isKeyPressed( Keys.ANYKEY ) ) {
-    dialogBoxClear();
-    dialogBoxWrite( "So is snake venom, Alfy.\w40" );
-    dialogBoxWrite( "Last time you brewed with these" );
-    dialogBoxWrite( "you blacked out for a week!\w40" );
-    dialogBoxSetPortrait( "Mia", c_lime, sprMiaPortraits, 0 );
+if ( isKeyPressed( Keys.ACTION, true ) || isKeyPressed( Keys.SPECIAL, true ) ) {
+    if ( dialogBoxIsFinished() ) {
+        with ( objCinematics ) {
+            dialogBoxHide();
+            timeline_running = true;
+        }
+    }
+    else {
+        dialogBoxSkip();
+    }
 }
 </string>
           </argument>
@@ -85,7 +85,9 @@ if ( isKeyPressed( Keys.ANYKEY ) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dialogBoxDraw( x, y, fntDialog, c_white, c_ltgray );
+            <string>if ( !global.dialogBoxHidden ) {
+    dialogBoxDraw( x, y, fntDialog, c_white, c_ltgray );
+}
 </string>
           </argument>
         </arguments>

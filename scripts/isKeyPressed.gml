@@ -1,4 +1,7 @@
-///isKeyPressed( key )
+///isKeyPressed( key: n, ignoreCinematics?: n )
 {
-    return keyboard_check_pressed( global.keyMapping[? argument0] );
+    if ( argument_count == 1 || !global.cinematics || argument[1] == true ) {
+        return keyboard_check_pressed( global.keyMapping[? argument[0]] );
+    }
+    return false;
 }

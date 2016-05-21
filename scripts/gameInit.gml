@@ -60,6 +60,7 @@
     charSprites[? CharacterSprites.ATTACK_BACK] = sprFreyBackAttack;
     global.characterSprites[? Characters.FREY] = charSprites;
     
+    global.cinematics = false;
     keyMappingInit();
     
     global._movables = ds_list_create();

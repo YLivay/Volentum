@@ -1,5 +1,5 @@
 ///formationStep()
-{
+{    
     if ( isKeyDown( Keys.LEFT ) ) {
         angle += rotationSpeed * global.timescale;
     }

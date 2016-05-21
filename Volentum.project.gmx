@@ -321,6 +321,8 @@
           <script>scripts\dialogBoxSkip.gml</script>
           <script>scripts\dialogBoxClear.gml</script>
           <script>scripts\dialogBoxSetPortrait.gml</script>
+          <script>scripts\dialogBoxIsFinished.gml</script>
+          <script>scripts\dialogBoxHide.gml</script>
         </scripts>
         <scripts name="Portrait">
           <script>scripts\portaitInit.gml</script>
@@ -354,6 +356,7 @@
   <objects name="objects">
     <object>objects\objControl</object>
     <object>objects\objViewpoint</object>
+    <object>objects\objCinematics</object>
     <objects name="Player">
       <object>objects\objFormation</object>
       <object>objects\objAlf</object>
@@ -401,6 +404,9 @@
       <object>objects\objWall</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tmlIntro</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rmLevel</room>
     <room>rooms\rmTest</room>
