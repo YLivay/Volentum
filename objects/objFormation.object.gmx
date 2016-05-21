@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>movableInit( FORMATION_SPEED, FORMATION_ACCELERATION, FORMATION_DEACCELERATION, FORMATION_MASS, TANGIBLE_PLAYER | TANGIBLE_BY_ENEMY_ATTACK, ev_user0 );
 formationInit( FORMATION_ROTATION_SPEED );
+pl_light_init( 160, c_white, 0.3 );
 </string>
           </argument>
         </arguments>

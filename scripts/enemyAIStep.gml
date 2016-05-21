@@ -75,6 +75,7 @@
             if ( aiPrevState != aiState ) {
                 stunSprite = sprite_index;
                 stunImageIndex = image_index;
+                audio_play_sound( sndHit, 0, false );
             }
             
             moveFrame = 0;
@@ -98,6 +99,10 @@
             break;
         
         case AIStates.DYING:
+            if ( aiPrevState != aiState ) {
+                audio_play_sound( sndKill, 0, false );
+            }
+        
             tangible = TANGIBLE_INTANGIBLE;
             if ( !dead ) {
                 dyingDelay = max( dyingDelay - 1 * global.timescale, 0 );

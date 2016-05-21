@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>movableInit( 0, 0, 0, 1, TANGIBLE_INTANGIBLE, ev_user0 );
 knockback = 0;
+pl_light_init( 0, c_white, 0 );
 </string>
           </argument>
         </arguments>

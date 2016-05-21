@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 audio_play_sound(sndMagicProjectile, 0, false);
+pl_light_init( 128, make_color_rgb(95, 205, 228), 0.5 );
 </string>
           </argument>
         </arguments>
